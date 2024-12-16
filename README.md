@@ -1,57 +1,51 @@
-# Nmap Scanning Project
+# Hands-On Nmap Scanning Project: Network Reconnaissance and Security Assessment
 
 ## Objective
+This project aimed to provide hands-on experience with network scanning using Nmap, a powerful open-source tool crucial for network reconnaissance and security assessment. By configuring a virtual environment with multiple operating systems, I sought to identify active hosts and gather detailed information about their configurations and services.
 
-The Nmap scanning project was designed to provide hands-on experience in network scanning and reconnaissance using Nmap, a powerful open-source network scanning tool. The primary goal was to configure a virtual environment with multiple operating systems and perform various network scans to identify active hosts and gather detailed information about their configurations and services. This lab aimed to enhance understanding of network security assessment techniques and familiarize participants with effective scanning methodologies.
+## Skills Learned
+- In-depth understanding of Nmap functionalities and command-line options.
+- Experience in setting up virtual machines for practical cybersecurity labs.
+- Ability to identify active hosts using various scanning techniques, including:
+  - TCP Connect Scans
+  - SYN Scans
+  - Service Version Detection
+- Proficiency in using the Nmap Scripting Engine (NSE) for advanced analysis.
+- Enhanced skills in troubleshooting and analyzing scan results.
 
-### Skills Learned
-
-- In-depth knowledge of Nmap functionalities and command-line options.
-- Hands-on experience in configuring virtual machines for practical cybersecurity labs.
-- Ability to identify active hosts and assess network services using diverse scanning techniques.
-- Proficiency in utilizing Nmap Scripting Engine (NSE) for advanced scanning tasks.
-- Enhanced troubleshooting and analytical skills in interpreting scan results.
-
-### Tools Used
-
-- Nmap: For network discovery and security auditing.
-- Kali Linux: A penetration testing distribution used as the main attack machine.
-- CentOS 7: A Linux distribution used as a target host.
-- Windows Server 2019: Another target host to practice scanning techniques.
-- Virtualization Software: Such as VirtualBox or VMware for creating isolated environments.
+## Tools Used
+- **Nmap**: For network discovery and security auditing.
+- **Kali Linux**: Utilized as the primary attack machine due to its extensive penetration testing tools.
+- **CentOS 7 & Windows Server 2019**: Configured as target hosts for diverse scanning techniques.
+- **Virtualization Software (VirtualBox/VMware)**: Created isolated environments to ensure safe testing.
 
 ## Steps
 
-### 1. Setup Virtual Machines:
+1. **Setup Virtual Machines**
+   - Configured three VMs:
+     - Host 1: Kali Linux (PenTest VM)
+     - Host 2: CentOS 7 (Target Host)
+     - Host 3: Windows Server 2019 (Target Host)
 
-- Created and configured three VMs:
-   - Host 1: Kali Linux (PenTest VM)
-   - Host 2: CentOS 7 (Target Host)
-   - Host 3: Windows Server 2019 (Target Host)
+2. **Network Configuration**
+   - All hosts were configured on the NAT Network (LAB-NAT-NET) to facilitate communication.
 
+3. **Running Nmap Scans**
+   - Utilized the file output switch to save scans:
+     ```bash
+     nmap -oN scan_results.txt <target_ip>
+     ```
+   - Conducted initial discovery scans to identify active hosts.
+   - Experimented with various scan types:
+     - TCP Connect Scans
+     - SYN Scans
+     - Service Version Detection
 
-### 2. Network Configuration:
+4. **Using NSE Scripts**
+   - Implemented NSE scripts such as `http-enum` to gather detailed information about web services running on target hosts.
 
-- Ensured all hosts were configured on the NAT Network (LAB-NAT-NET) to facilitate communication between VMs.
-
-
-### 3. Running Nmap Scans:
-
-- Utilized the file output switch to save scan results using the command: nmap -oN  .
-- Conducted initial discovery scans to identify active hosts on the network.
-- Experimented with various Nmap scans, including TCP connect scans, SYN scans, and service version detection.
-
-
-### 4. Using NSE Scripts:
-
-- Implemented Nmap Scripting Engine (NSE) scripts to gather more detailed information about the services running on the target hosts.
-
-
-### 5. Documentation and Review:
-
-- Documented findings from each scan, detailing the information gathered about each host, including open ports and running services.
-
+5. **Documentation and Review**
+   - Documented findings including open ports and running services, analyzing the implications for security posture.
 
 ## Conclusion
-
-This lab significantly enhanced my practical skills in network scanning and cybersecurity assessment. The hands-on experience with Nmap not only solidified my understanding of scanning techniques but also prepared me for real-world applications in cybersecurity roles.
+This lab significantly enhanced my practical skills in network scanning and cybersecurity assessments. The hands-on experience with Nmap solidified my understanding of scanning techniques and prepared me for real-world applications in cybersecurity roles. Moving forward, I plan to explore more advanced scanning methods and automate my scanning processes using scripting.
