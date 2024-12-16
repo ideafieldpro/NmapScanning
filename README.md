@@ -24,12 +24,10 @@ The Nmap scanning project was designed to provide hands-on experience in network
 
 ### 1. Setup Virtual Machines:
 
-- Created three VMs: - Host 1: Kali Linux (PenTest VM)
-- Host 2: CentOS 7 (Target Host)
-- Host 3: Windows Server 2019 (Target Host)
-
-
-- Configured the Kali VM following the installation instructions provided in the previous lab.
+- Created and configured three VMs:
+   - Host 1: Kali Linux (PenTest VM)
+   - Host 2: CentOS 7 (Target Host)
+   - Host 3: Windows Server 2019 (Target Host)
 
 
 ### 2. Network Configuration:
@@ -53,21 +51,6 @@ The Nmap scanning project was designed to provide hands-on experience in network
 
 - Documented findings from each scan, detailing the information gathered about each host, including open ports and running services.
 
-
-### 6. Lab Conclusion:
-
-- After completing the lab exercises, deleted the virtual machines to maintain a clean environment for future labs.
-- Reflected on the experiences gained during the lab, reinforcing knowledge of network scanning processes.
-
-Screenshots
-
-Ref 1: Nmap Scan Results
-Nmap Scan Results
-Description: Example of the output generated from an Nmap scan on the Kali VM, showcasing identified active hosts and their associated services.
-
-Ref 2: VM Network Configuration
-VM Network Configuration
-Description: Screenshot of the network settings for the virtual machines, confirming they are all configured on the same NAT network.
 
 ## Conclusion
 
